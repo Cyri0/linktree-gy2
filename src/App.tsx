@@ -1,5 +1,6 @@
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 import { logMeIn } from "./services/publicAPI"
+import { getAuthUserData } from "./services/protectedURL"
 
 const App = () => {
   const [username, setUsername] = useState("")
@@ -9,6 +10,10 @@ const App = () => {
     e.preventDefault()
     logMeIn(username,password)
   }
+
+  useEffect(()=>{
+    getAuthUserData()
+  },[])
 
   return (
     <div>
