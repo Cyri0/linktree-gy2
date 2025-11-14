@@ -1,0 +1,1 @@
+export const baseURL = "https://h3hqq4v3-8000.euw.devtunnels.ms"
